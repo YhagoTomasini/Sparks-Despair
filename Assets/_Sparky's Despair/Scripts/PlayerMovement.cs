@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     bool flipCharacter = true;
     public bool PodeMoverPersonagem = false;
     public GameObject personagemquevira;
+    public float distanciaRaycast;
 
     void Start()
     {
@@ -49,6 +50,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Invoke("gambiarra", .3f);
+    }
+
+    bool CheckMovement(Vector3 direction)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, direction, out hit, distanciaRaycast))
+        {
+            if (hit.collider != null && !hit.collider.isTrigger)
+            {
+                return false; // Algo está bloqueando o caminho
+            }
+        }
+        return true; // Nenhum obstáculo encontrado
     }
 
     void flip()
