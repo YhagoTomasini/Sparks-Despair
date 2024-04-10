@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         if (dirX > 0 && podeMoverParaDireita == true && PodeMoverPersonagemGeral == true)
         {
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x + 1f, gameObject.transform.position.y, gameObject.transform.position.z);
-            //  gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x +.25f, gameObject.transform.position.y, gameObject.transform.position.z);
             if (!flipCharacter)
                 flip();
         }
@@ -98,22 +97,6 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
-        //void OnCollisionEnter(Collision collision)
-        //{
-        //    if (collision.gameObject.layer == LayerMask.NameToLayer("blockpath"))
-        //    {
-        //        PodeMoverPersonagem = false; // Interrompe o movimento do personagem ao colidir com um obstáculo
-        //    }
-        //}
-
-        //void OnCollisionExit(Collision collision)
-        //{
-        //    if (collision.gameObject.layer == LayerMask.NameToLayer("blockpath"))
-        //    {
-        //        PodeMoverPersonagem = true; // Permite que o personagem se mova novamente após sair da colisão com um obstáculo
-        //    }
-        //}
     }
 }
 
