@@ -3,8 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Morte : MonoBehaviour
+public class ColliderMorte: MonoBehaviour
+
 {
+
+
+    IEnumerator MorteInimigo()
+    {
+
+        gameObject.transform.parent.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = false;
+        Debug.Log("Inimigo");
+        yield return new WaitForSeconds(5);
+        Debug.Log("GAME OVER");
+
+
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Verifica se a colisão envolve o personagem
@@ -13,8 +28,9 @@ public class Morte : MonoBehaviour
             // Reinicia o jogo carregando a cena atual
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (other.tag == "Inimigo")
         {
-            Debug.LogWarning("Transformação da câmera não encontrada!");
+            StartCoroutine(MorteInimigo());
         }
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dano
+  - Obstaculo
+  - Desodorante
+  - Inimigo
   layers:
   - Default
   - TransparentFX

@@ -18,9 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject personagemquevira;
 
+    public bool PodeMoverPersonagemGeral;
+
 
     void Start()
     {
+        PodeMoverPersonagemGeral = true;
+
         PodeMoverPersonagem = true;
         podeMoverParaEsquerda = true;
         podeMoverParaDireita = true;
@@ -43,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         PodeMoverPersonagem = false;
 
         //Direita
-        if (dirX > 0 && podeMoverParaDireita == true)
+        if (dirX > 0 && podeMoverParaDireita == true && PodeMoverPersonagemGeral == true)
         {
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x + 1f, gameObject.transform.position.y, gameObject.transform.position.z);
             //  gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x +.25f, gameObject.transform.position.y, gameObject.transform.position.z);
@@ -51,19 +55,19 @@ public class PlayerMovement : MonoBehaviour
                 flip();
         }
         // Esquerda
-        if (dirX < 0 && podeMoverParaEsquerda == true)
+        if (dirX < 0 && podeMoverParaEsquerda == true && PodeMoverPersonagemGeral == true)
         {
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x - 1f, gameObject.transform.position.y, gameObject.transform.position.z);
             if (flipCharacter)
                 flip();
         }
         //cima
-        if (dirZ > 0 && podeMoverParaCima == true)
+        if (dirZ > 0 && podeMoverParaCima == true && PodeMoverPersonagemGeral == true)
         {
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 1f);
         }
         //baixo
-        if (dirZ < 0 && podeMoverParaBaixo == true)
+        if (dirZ < 0 && podeMoverParaBaixo == true && PodeMoverPersonagemGeral == true)
         {
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 1f);
         }
