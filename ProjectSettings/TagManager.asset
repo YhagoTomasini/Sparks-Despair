@@ -5,13 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dano
-  - Desodorante
-  - Obstaculo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - blockpath
+  - 
   - Water
   - UI
   - Player
