@@ -8,6 +8,7 @@ TagManager:
   - Obstaculo
   - Desodorante
   - Inimigo
+  - tagchao
   layers:
   - Default
   - TransparentFX
