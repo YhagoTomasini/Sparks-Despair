@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SpawnerChao : MonoBehaviour
 {
-    public GameObject chaoPrefab;
+    public GameObject[] chaoOpcao;
     public float spawnDistancia;
     public float despawnDistancia;
-    public float camPosicaoI;
+    private float camPosicaoI;
 
     
     void Start()
@@ -18,7 +18,6 @@ public class SpawnerChao : MonoBehaviour
         despawnDistancia = 30f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         GameObject[] Deletechao = GameObject.FindGameObjectsWithTag("tagchao");
@@ -31,7 +30,6 @@ public class SpawnerChao : MonoBehaviour
 
         foreach (GameObject Delete in Deletechao)
         {
-           // Debug.Log("Posição do filho: " + Deletechao.transform.position.z);
 
             if (+Delete.transform.position.z > Camera.main.transform.position.z + despawnDistancia)
             {
@@ -41,8 +39,13 @@ public class SpawnerChao : MonoBehaviour
     }
     void SpawnChao()
     {
+        int randomIndex = Random.Range(0, chaoOpcao.Length);
+        GameObject chaoPrefab = chaoOpcao[randomIndex];
+
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, camPosicaoI + spawnDistancia);
         Quaternion rotation = Quaternion.Euler(90, 0, 0);
         GameObject Novochao = Instantiate(chaoPrefab, transform.position, rotation);
+
         Novochao.tag = "tagchao";
     }
 }
