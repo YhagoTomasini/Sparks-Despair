@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2054141883839061858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.9822855, y: 6.617935, z: 1.5488625}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4300643867215630452}
@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8822435190940621024}
   - component: {fileID: 531862196163182190}
   - component: {fileID: 8185918566406673307}
-  - component: {fileID: 8870956237164888730}
   m_Layer: 0
   m_Name: arvore
   m_TagString: Untagged
@@ -132,18 +131,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8870956237164888730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3885083820039564939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8a5fd24435447b2ba5616b88438f68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5850873109365616348
 GameObject:
   m_ObjectHideFlags: 0
