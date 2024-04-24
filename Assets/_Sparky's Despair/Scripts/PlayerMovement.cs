@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject personagemquevira;
     public GameObject EyesOrdem;
+    public GameObject TopFlip;
 
     public bool PodeMoverPersonagemGeral;
 
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
             AnimLegs.SetBool("LFE", true);
         }
         EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
 
     }
 
@@ -65,13 +67,14 @@ public class PlayerMovement : MonoBehaviour
         if (QualLeg % 2 == 0)
         {
             AnimLegs.SetBool("LTD", true);
-            Debug.Log("par");
         }
         if (QualLeg % 2 != 0)
         {
             AnimLegs.SetBool("LTE", true);
         }
         EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -3;
+        TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
+
     }
 
     void MovePersonagem()

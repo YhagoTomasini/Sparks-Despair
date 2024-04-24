@@ -176,6 +176,24 @@ MonoBehaviour:
   - {fileID: 9007975645085544011, guid: 4fe142e8bcd884f6d98eb46decab7005, type: 3}
   spawnDistancia: 20
   despawnDistancia: 40
+--- !u!1 &121815206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028161158814696327, guid: b626353aef09748f38dff9c06a6ab8e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279769314502969108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &121815209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121815206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d8a5fd24435447b2ba5616b88438f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &222017120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1394,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066670456}
   m_CullTransparentMesh: 1
+--- !u!1 &1173203550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028161157439487156, guid: b626353aef09748f38dff9c06a6ab8e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279769314502969108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1184560142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1028161159199211344, guid: b626353aef09748f38dff9c06a6ab8e4,
@@ -2247,10 +2271,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1028161157359709319, guid: b626353aef09748f38dff9c06a6ab8e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028161157439487146, guid: b626353aef09748f38dff9c06a6ab8e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1028161158770606335, guid: b626353aef09748f38dff9c06a6ab8e4,
         type: 3}
       propertyPath: m_Name
       value: legs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028161159199211350, guid: b626353aef09748f38dff9c06a6ab8e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1279769313997175227, guid: b626353aef09748f38dff9c06a6ab8e4,
         type: 3}
@@ -2317,6 +2356,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1279769315515413759, guid: b626353aef09748f38dff9c06a6ab8e4,
+        type: 3}
+      propertyPath: TopFlip
+      value: 
+      objectReference: {fileID: 1173203550}
     - target: {fileID: 1279769315515413759, guid: b626353aef09748f38dff9c06a6ab8e4,
         type: 3}
       propertyPath: AnimLegs
