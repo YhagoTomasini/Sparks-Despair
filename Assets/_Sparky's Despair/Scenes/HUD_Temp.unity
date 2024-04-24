@@ -3785,8 +3785,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pressione ENTER para jogar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e507a827a31024a0089430e7a20891d4, type: 2}
-  m_sharedMaterial: {fileID: -851686418218043291, guid: e507a827a31024a0089430e7a20891d4,
+  m_fontAsset: {fileID: 11400000, guid: 2bb86154d4e484cc98839a027e00cc79, type: 2}
+  m_sharedMaterial: {fileID: -6144906622709993078, guid: 2bb86154d4e484cc98839a027e00cc79,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
