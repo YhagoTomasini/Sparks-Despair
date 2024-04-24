@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ffb00bc71087468f9b4db0a82331f0e
+guid: 31787a5c0bd874ddab548b58e04898ec
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Amatic SC
+  - Patrick Hand
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
