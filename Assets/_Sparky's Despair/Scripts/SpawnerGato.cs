@@ -12,7 +12,7 @@ public class SpawnerGato : MonoBehaviour
     void Start()
     {
         TempoSpawn = 5f;
-        TempoEntre = .6f;
+        TempoEntre = .5f;
         StartCoroutine(SpawnCat());
     }
 
