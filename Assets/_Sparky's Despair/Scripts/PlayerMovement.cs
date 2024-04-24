@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool podeMoverParaBaixo = false;
 
     public GameObject personagemquevira;
+    public GameObject EyesOrdem;
 
     public bool PodeMoverPersonagemGeral;
 
@@ -32,8 +33,6 @@ public class PlayerMovement : MonoBehaviour
         podeMoverParaDireita = true;
         podeMoverParaCima = true;
         podeMoverParaBaixo = true;
-
-        QualLeg = 1;
     }
 
     void gambiarra()
@@ -41,20 +40,38 @@ public class PlayerMovement : MonoBehaviour
         PodeMoverPersonagem = true;
         AnimLegs.SetBool("LFD", false);
         AnimLegs.SetBool("LFE", false);
-
+        AnimLegs.SetBool("LTD", false);
+        AnimLegs.SetBool("LTE", false);
 
     }
 
     void MovendoFrente()
     {
-        if(QualLeg == )
+        if(QualLeg % 2 == 0)
         {
             AnimLegs.SetBool("LFD", true);
+            Debug.Log("par");
         }
-        else if()
+        if (QualLeg % 2 != 0)
         {
             AnimLegs.SetBool("LFE", true);
         }
+        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
+    }
+
+    void MovendoTraz()
+    {
+        if (QualLeg % 2 == 0)
+        {
+            AnimLegs.SetBool("LTD", true);
+            Debug.Log("par");
+        }
+        if (QualLeg % 2 != 0)
+        {
+            AnimLegs.SetBool("LTE", true);
+        }
+        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -3;
     }
 
     void MovePersonagem()
@@ -64,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         //Direita
         if (dirX > 0 && podeMoverParaDireita == true && PodeMoverPersonagemGeral == true)
         {
+            MovendoFrente();
 
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x + 1f, gameObject.transform.position.y, gameObject.transform.position.z);
             if (!flipCharacter)
@@ -72,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         // Esquerda
         if (dirX < 0 && podeMoverParaEsquerda == true && PodeMoverPersonagemGeral == true)
         {
+            MovendoFrente();
 
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x - 1f, gameObject.transform.position.y, gameObject.transform.position.z);
             if (flipCharacter)
@@ -80,12 +99,14 @@ public class PlayerMovement : MonoBehaviour
         //cima
         if (dirZ > 0 && podeMoverParaCima == true && PodeMoverPersonagemGeral == true)
         {
+            MovendoTraz();
 
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 1f);
         }
         //baixo
         if (dirZ < 0 && podeMoverParaBaixo == true && PodeMoverPersonagemGeral == true)
         {
+            MovendoFrente();
 
             gameObject.GetComponent<Transform>().position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 1f);
         }
