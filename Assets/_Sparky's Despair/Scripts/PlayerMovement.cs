@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        PodeMoverPersonagemGeral = true;
+        PodeMoverPersonagemGeral = false;
 
         PodeMoverPersonagem = true;
         podeMoverParaEsquerda = true;
