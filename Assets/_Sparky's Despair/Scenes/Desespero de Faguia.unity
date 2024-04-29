@@ -2338,27 +2338,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391691215}
   m_CullTransparentMesh: 1
---- !u!1 &1408741247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6988657361870653598, guid: f103966e4267fb24fbe888cea04bdf93,
+--- !u!95 &1408741249 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2366874978024640630, guid: f103966e4267fb24fbe888cea04bdf93,
     type: 3}
   m_PrefabInstance: {fileID: 9185890366613696730}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1408741249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408741247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82de4967378191e4587e389849863f12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Intensidade: 100
-  Velocidade: 10
-  Posicao1: {x: 0, y: 0, z: 0}
 --- !u!1 &1430185765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +3936,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9185890367749849905, guid: f103966e4267fb24fbe888cea04bdf93,
+        type: 3}
+      propertyPath: AnimEyes
+      value: 
+      objectReference: {fileID: 1408741249}
     - target: {fileID: 9185890367749849919, guid: f103966e4267fb24fbe888cea04bdf93,
         type: 3}
       propertyPath: m_Name

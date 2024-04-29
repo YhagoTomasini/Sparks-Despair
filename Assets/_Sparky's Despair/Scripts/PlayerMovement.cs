@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public bool PodeMoverPersonagemGeral;
 
     public Animator AnimLegs;
+    public Animator AnimEyes;
     public int QualLeg;
 
     void Start()
@@ -43,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         AnimLegs.SetBool("LFE", false);
         AnimLegs.SetBool("LTD", false);
         AnimLegs.SetBool("LTE", false);
-
+        AnimEyes.SetBool("movendo", false);
     }
 
     void MovendoFrente()
@@ -80,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     void MovePersonagem()
     {
         PodeMoverPersonagem = false;
+        AnimEyes.SetBool("movendo", true);
 
         //Direita
         if (dirX > 0 && podeMoverParaDireita == true && PodeMoverPersonagemGeral == true)
