@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 5168503445481788126}
   - component: {fileID: -3316942547252117689}
   - component: {fileID: 1755152700}
+  - component: {fileID: 7928495641786051009}
   m_Layer: 3
   m_Name: TuiCat
   m_TagString: Untagged
@@ -198,6 +199,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7928495641786051009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848490297358723380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ae61e95e02349f1a519ab5633e7258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &5217520080493071497
 GameObject:
   m_ObjectHideFlags: 0

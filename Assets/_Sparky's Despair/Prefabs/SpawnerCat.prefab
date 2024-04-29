@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5b71d324059468c8b05328e39b94e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GatoI: {fileID: 3848490297358723380, guid: 65f35834d9c1d47b7841599793d4b618, type: 3}
+  gatoOpcao:
+  - {fileID: 6887803143309973336, guid: a3a587f0065774efcaf24f53c960a338, type: 3}
+  - {fileID: 744353559500430549, guid: fd8d1ad1529fd46a2a703ae5c63ef468, type: 3}
+  - {fileID: 6428137284306458365, guid: 4244c139e9e834310a88874561ca4c67, type: 3}
+  - {fileID: 3848490297358723380, guid: 65f35834d9c1d47b7841599793d4b618, type: 3}
   TempoSpawn: 0
   TempoEntre: 0
+  gatoPrefab: {fileID: 0}

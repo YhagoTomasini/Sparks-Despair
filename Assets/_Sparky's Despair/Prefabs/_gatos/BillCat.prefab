@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7765202306544100546}
   - component: {fileID: 4708973780866077438}
   - component: {fileID: 5117734380576913054}
+  - component: {fileID: 893007446923884695}
   m_Layer: 0
   m_Name: collider
   m_TagString: Dano
@@ -216,6 +217,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &893007446923884695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6449357503070514428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ae61e95e02349f1a519ab5633e7258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &6887803143309973336
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +241,7 @@ GameObject:
   - component: {fileID: 3261951390209469618}
   - component: {fileID: 4253979349134180651}
   - component: {fileID: 7709865686818389840}
+  - component: {fileID: 4186883884843468880}
   m_Layer: 3
   m_Name: BillCat
   m_TagString: Untagged
@@ -317,3 +332,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4186883884843468880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887803143309973336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ae61e95e02349f1a519ab5633e7258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}

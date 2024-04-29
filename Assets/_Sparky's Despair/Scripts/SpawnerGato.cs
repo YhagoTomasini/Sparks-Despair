@@ -11,7 +11,7 @@ public class SpawnerGato : MonoBehaviour
 
     void Start()
     {
-        TempoSpawn = 5f;
+        TempoSpawn = 3f;
         TempoEntre = .5f;
         StartCoroutine(SpawnCat());
     }
@@ -22,19 +22,18 @@ public class SpawnerGato : MonoBehaviour
         Instantiate(gatoPrefab, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(TempoEntre);
 
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(TempoEntre);
+        //DefinirGato();
+        //Instantiate(gatoPrefab, transform.position, Quaternion.identity);
+        //yield return new WaitForSeconds(TempoEntre);
 
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(TempoEntre);
+        //DefinirGato();
+        //Instantiate(gatoPrefab, transform.position, Quaternion.identity);
+        //yield return new WaitForSeconds(TempoEntre);
 
         DefinirGato();
         Instantiate(gatoPrefab, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(TempoSpawn);
 
-        DefinirGato();
         StartCoroutine(SpawnCat());
 
 

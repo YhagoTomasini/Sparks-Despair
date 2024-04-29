@@ -181,6 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a877ec748aaf461682bacc4e5fc1877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimFire: {fileID: 0}
+  Olhos: {fileID: 0}
 --- !u!54 &7978252049467936872
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5565,12 +5567,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9185890367414731552}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.35000002, z: 0.25}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: 0, y: -1.1666666, z: 0.83333325}
+  m_LocalScale: {x: 2.333333, y: 2.333333, z: 2.333333}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 9185890367749849904}
-  m_RootOrder: 9
+  m_Father: {fileID: 6988657361713181770}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &9185890367414731558
 SpriteRenderer:
@@ -5666,7 +5668,6 @@ Transform:
   - {fileID: 7978252048009484907}
   - {fileID: 7978252049274411343}
   - {fileID: 5094821204413414695}
-  - {fileID: 9185890367414731553}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5722,6 +5723,7 @@ MonoBehaviour:
   TopFlip: {fileID: 6988657361478798202}
   PodeMoverPersonagemGeral: 0
   AnimLegs: {fileID: 7978252048663623481}
+  AnimEyes: {fileID: 0}
   QualLeg: 0
 --- !u!114 &9185890367749849898
 MonoBehaviour:
@@ -5761,7 +5763,7 @@ PrefabInstance:
     - target: {fileID: 2271613326759564747, guid: 9d212c16093d84f44944384e3a4960af,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.92
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 2271613328625941192, guid: 9d212c16093d84f44944384e3a4960af,
         type: 3}

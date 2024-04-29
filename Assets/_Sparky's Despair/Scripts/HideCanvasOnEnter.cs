@@ -6,6 +6,8 @@ public class HideCanvasOnEnter : MonoBehaviour
     public Canvas canvasToHide;
     public GameObject playerGame;
     public GameObject CamGame;
+    public GameObject RainGame;
+
     // Flag para verificar se o enter foi pressionado
     private bool enterPressed = false;
 
@@ -18,6 +20,8 @@ public class HideCanvasOnEnter : MonoBehaviour
             enterPressed = true;
 
             CamGame.GetComponent<CamMoviment>().Cammove = true;
+            RainGame.GetComponent<CamMoviment>().Cammove = true;
+
 
 
 
