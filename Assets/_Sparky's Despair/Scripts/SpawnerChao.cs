@@ -15,7 +15,7 @@ public class SpawnerChao : MonoBehaviour
     {
         camPosicaoI = 0f;
         spawnDistancia = 10f;
-        despawnDistancia = 30f;
+        despawnDistancia = 60f;
     }
 
     void Update()
