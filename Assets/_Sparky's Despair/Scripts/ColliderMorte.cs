@@ -8,7 +8,7 @@ public class ColliderMorte: MonoBehaviour
 {
     public Animator AnimFire;
     public GameObject Olhos;
-    public GameObject Fogo;
+    public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
 
     private void Start()
@@ -20,17 +20,14 @@ public class ColliderMorte: MonoBehaviour
     {
 
         gameObject.transform.parent.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = false;
+
         Olhos.SetActive(false);
+        AnimFire.SetBool("Apagou", true);
+        AnimVida.enabled = false;
 
         Camera.main.GetComponent<CamMoviment>().enabled = false;
-
         Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 15);
         Camera.main.transform.position = novaPosicaoCam;
-
-        AnimFire.SetBool("Apagou", true);
-
-        Fogo.transform.position = new Vector3 (Fogo.transform.position.x, Fogo.transform.position.y + 1, Fogo.transform.position.z);
-        
 
         yield return new WaitForSeconds(5);
 
