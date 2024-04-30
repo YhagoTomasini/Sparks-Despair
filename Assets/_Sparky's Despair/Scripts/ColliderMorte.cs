@@ -9,6 +9,7 @@ public class ColliderMorte: MonoBehaviour
     public Animator AnimFire;
     public Animator AnimLegs;
     public GameObject Olhos;
+    public GameObject Luz;
     public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
 
@@ -21,6 +22,8 @@ public class ColliderMorte: MonoBehaviour
     {
 
         gameObject.transform.parent.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = false;
+
+        Luz.SetActive(false);
 
         Olhos.SetActive(false);
         AnimFire.SetBool("Apagou", true);
