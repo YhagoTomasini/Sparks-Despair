@@ -7,6 +7,7 @@ public class ColliderMorte: MonoBehaviour
 
 {
     public Animator AnimFire;
+    public Animator AnimLegs;
     public GameObject Olhos;
     public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
@@ -24,6 +25,8 @@ public class ColliderMorte: MonoBehaviour
         Olhos.SetActive(false);
         AnimFire.SetBool("Apagou", true);
         AnimVida.enabled = false;
+
+        AnimLegs.SetBool("Morto", true);
 
         Camera.main.GetComponent<CamMoviment>().enabled = false;
         Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 15);
