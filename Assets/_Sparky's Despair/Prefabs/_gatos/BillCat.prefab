@@ -241,7 +241,6 @@ GameObject:
   - component: {fileID: 3261951390209469618}
   - component: {fileID: 4253979349134180651}
   - component: {fileID: 7709865686818389840}
-  - component: {fileID: 4186883884843468880}
   m_Layer: 3
   m_Name: BillCat
   m_TagString: Untagged
@@ -278,6 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80441bb8ec124885864461e626786de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawner: {fileID: 1324654121731455146, guid: b295e674314634f07bb085389b4c2007, type: 3}
   CatVelocidade: 0
   CatVida: 0
 --- !u!212 &7709865686818389840
@@ -332,16 +332,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4186883884843468880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6887803143309973336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ae61e95e02349f1a519ab5633e7258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
