@@ -14,9 +14,12 @@ public class HideCanvasOnEnter : MonoBehaviour
     void Update()
     {
         // Verifica se a tecla Enter foi pressionada e se ainda não foi processada
-        if (Input.GetKeyDown(KeyCode.Return) && !enterPressed)
-        {
-            // Marca o enter como pressionado para não processar novamente
+        // if (Input.GetKeyDown(KeyCode.Return) && !enterPressed)
+        //{
+
+
+        if (Input.GetButton("Jump")){ 
+        // Marca o enter como pressionado para não processar novamente
             enterPressed = true;
 
             CamGame.GetComponent<CamMoviment>().Cammove = true;
