@@ -18,6 +18,8 @@ public class QuitBtn : MonoBehaviour
         {
 
             Application.Quit();
+
+            Debug.Log("Saiu");
         }
     }
 }
