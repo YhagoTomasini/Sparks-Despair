@@ -129,7 +129,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        dirX = Input.GetAxis("Horizontal");
+        //if (Input.GetButton("Start"))
+        //{
+        //    Debug.Log("Start");
+        //}
+
+            dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
 
 
@@ -139,7 +144,9 @@ public class PlayerMovement : MonoBehaviour
             if (PodeMoverPersonagem == true)
             {
 
-                MovePersonagem();
+
+
+               MovePersonagem();
 
             }
 

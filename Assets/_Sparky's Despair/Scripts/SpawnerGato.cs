@@ -5,38 +5,49 @@ using UnityEngine;
 public class SpawnerGato : MonoBehaviour
 {
     public GameObject[] gatoOpcao;
+    public AudioClip[] Miar;
     public float TempoSpawn;
     public float TempoEntre;
     public GameObject gatoPrefab;
+    public int SpawnI;
+    public int SpawnF;
+
+    private AudioSource QuemMia;
+
+
 
     void Start()
     {
-        TempoSpawn = 5f;
-        TempoEntre = .5f;
+        SpawnI = 0;
+        TempoSpawn = 2f;
+        TempoEntre = .4f;
+
+        QuemMia = GetComponent<AudioSource>();
+
         StartCoroutine(SpawnCat());
     }
 
     IEnumerator SpawnCat()
     {
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(TempoEntre);
+        SpawnF = Random.Range(1, 5);
+        while (SpawnI<SpawnF)
+        {
+            DefinirGato();
+            Instantiate(gatoPrefab, transform.position, Quaternion.identity);
 
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(TempoEntre);
+            AudioClip MiardaVez = Miar[Random.Range(0, Miar.Length)];
+            QuemMia.PlayOneShot(MiardaVez);
 
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(TempoEntre);
+            SpawnI++;
 
-        DefinirGato();
-        Instantiate(gatoPrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(TempoEntre);
+
+        }
+
+        
         yield return new WaitForSeconds(TempoSpawn);
-
-        DefinirGato();
+        SpawnI = 0;
         StartCoroutine(SpawnCat());
-
 
     }
 

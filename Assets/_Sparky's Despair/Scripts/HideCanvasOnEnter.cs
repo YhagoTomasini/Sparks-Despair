@@ -6,18 +6,25 @@ public class HideCanvasOnEnter : MonoBehaviour
     public Canvas canvasToHide;
     public GameObject playerGame;
     public GameObject CamGame;
+    public GameObject RainGame;
+
     // Flag para verificar se o enter foi pressionado
     private bool enterPressed = false;
 
     void Update()
     {
         // Verifica se a tecla Enter foi pressionada e se ainda não foi processada
-        if (Input.GetKeyDown(KeyCode.Return) && !enterPressed)
-        {
-            // Marca o enter como pressionado para não processar novamente
+        // if (Input.GetKeyDown(KeyCode.Return) && !enterPressed)
+        //{
+
+
+        if (Input.GetButton("Jump")){ 
+        // Marca o enter como pressionado para não processar novamente
             enterPressed = true;
 
             CamGame.GetComponent<CamMoviment>().Cammove = true;
+            RainGame.GetComponent<CamMoviment>().Cammove = true;
+
 
 
 
