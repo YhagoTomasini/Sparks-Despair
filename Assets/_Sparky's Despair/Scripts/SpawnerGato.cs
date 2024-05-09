@@ -29,7 +29,7 @@ public class SpawnerGato : MonoBehaviour
 
     IEnumerator SpawnCat()
     {
-        SpawnF = Random.Range(1, 5);
+        SpawnF = Random.Range(1, 4);
         while (SpawnI<SpawnF)
         {
             DefinirGato();

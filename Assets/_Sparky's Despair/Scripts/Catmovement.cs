@@ -19,7 +19,7 @@ public class Catmovement : MonoBehaviour
         PosicaoI = gameObject.transform.position.x;
         if (PosicaoI > 0f)
         {
-            transform.Rotate(-60, 180, 0); 
+            transform.Rotate(-120, 180, 0); 
         }
     }
 

@@ -35,7 +35,7 @@ public class ColliderMorte: MonoBehaviour
         AnimLegs.SetBool("Morto", true);
 
         Camera.main.GetComponent<CamMoviment>().enabled = false;
-        Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 15);
+        Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
         Camera.main.transform.position = novaPosicaoCam;
 
         yield return new WaitForSeconds(5);

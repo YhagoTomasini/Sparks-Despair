@@ -13,8 +13,8 @@ public class SpawnerChao : MonoBehaviour
     
     void Start()
     {
-        camPosicaoI = 0f;
-        spawnDistancia = 10f;
+        camPosicaoI = -3.5f;
+        spawnDistancia = 11.9f;
         despawnDistancia = 60f;
     }
 

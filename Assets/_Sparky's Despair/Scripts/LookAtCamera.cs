@@ -9,7 +9,7 @@ public class LookAtCamera : MonoBehaviour
 
     void Start()
     {
-       transform.Rotate(30f, 0f, 0f);
+       transform.Rotate(60f, 0f, 0f);
     }
 
     void Update()
