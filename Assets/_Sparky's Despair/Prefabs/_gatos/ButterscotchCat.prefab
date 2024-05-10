@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 4468019097296678735}
   - component: {fileID: 1484990909169523059}
   - component: {fileID: 1353267523554540819}
+  - component: {fileID: 243248554169695891}
   m_Layer: 0
   m_Name: collider
   m_TagString: Dano
@@ -199,6 +200,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &243248554169695891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883450531766986609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bbac913853d4cae8311bc6390b40e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8598698566259145064
 GameObject:
   m_ObjectHideFlags: 0

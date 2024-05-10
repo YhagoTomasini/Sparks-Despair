@@ -13,6 +13,17 @@ public class layerOrdem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("MenosL"))
+        {
+            gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder= -10;
+            
+            Debug.Log("gatito");
+        }
     }
 }
