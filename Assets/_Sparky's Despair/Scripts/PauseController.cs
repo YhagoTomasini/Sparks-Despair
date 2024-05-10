@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 
 public class PauseController : MonoBehaviour
 {
     // Referência para a Canvas de pausa
-    public Canvas Menujogoparado;
+    // public Canvas Menujogoparado;
+
+    public GameObject Menujogoparado;
+    public GameObject CanvasGamePlay;
+    public GameObject CanvasPause;
+    public GameObject FirstSelected3;
 
     // Variável para controlar se o jogo está em pausa ou não
     private bool isPaused = false;
@@ -22,7 +27,15 @@ public class PauseController : MonoBehaviour
         }
     }
 
-    public  void Pause()
+    public void SwitchCanvasToPause()
+    {
+        CanvasGamePlay.SetActive(false);
+        CanvasPause.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(FirstSelected3);
+    }
+
+
+public void Pause()
      {
 
         
@@ -32,19 +45,20 @@ public class PauseController : MonoBehaviour
             // Se o jogo estiver em pausa, ativa a Canvas de pausa
             if (isPaused)
             {
-                // Ativa a Canvas de pausa
-                Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
+            // Ativa a Canvas de pausa
+            //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
 
+            Menujogoparado.SetActive(true);
                 // Pausa o jogo
                 Time.timeScale = 0f;
             }
             else
             {
-                // Desativa a Canvas de pausa
-                Menujogoparado.gameObject.GetComponent<Canvas>().enabled = false;
-
-                // Retoma o jogo
-                Time.timeScale = 1f;
+            // Desativa a Canvas de pausa
+            //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = false;
+            Menujogoparado.SetActive(false);
+            // Retoma o jogo
+            Time.timeScale = 1f;
             }
         
      }
