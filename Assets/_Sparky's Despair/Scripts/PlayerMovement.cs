@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AnimLegs.SetBool("LFE", true);
         }
-        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = 2;
         TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
 
     }
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AnimLegs.SetBool("LTE", true);
         }
-        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -3;
+        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -1;
         TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
 
     }
