@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator AnimEyes;
     public int QualLeg;
 
+    public bool NoTronco;
+
     void Start()
     {
         PodeMoverPersonagemGeral = false;
@@ -35,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         podeMoverParaDireita = true;
         podeMoverParaCima = true;
         podeMoverParaBaixo = true;
+
+        NoTronco = false;
     }
 
     void gambiarra()
@@ -49,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MovendoFrente()
     {
-        if(QualLeg % 2 == 0)
+        if (QualLeg % 2 == 0)
         {
             AnimLegs.SetBool("LFD", true);
             Debug.Log("par");
@@ -126,31 +130,25 @@ public class PlayerMovement : MonoBehaviour
         flipCharacter = !flipCharacter;
         personagemquevira.GetComponent<Transform>().Rotate(0, 180, 0);
     }
-    void Update()
+    void FixedUpdate()
     {
 
-        //if (Input.GetButton("Start"))
-        //{
-        //    Debug.Log("Start");
-        //}
-
-            dirX = Input.GetAxis("Horizontal");
+        dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
 
+        if (dirX != 0 && dirZ != 0)
+            Debug.Log("fds");
 
-        if (dirX != 0 || dirZ != 0)
+        else if (dirX != 0 || dirZ != 0)
         {
 
             if (PodeMoverPersonagem == true)
             {
-
-
-
-               MovePersonagem();
+                MovePersonagem();
 
             }
 
         }
+
     }
 }
-

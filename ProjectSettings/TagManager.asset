@@ -10,6 +10,8 @@ TagManager:
   - Inimigo
   - tagchao
   - MenosL
+  - Tronco
+  - Teste
   layers:
   - Default
   - TransparentFX
