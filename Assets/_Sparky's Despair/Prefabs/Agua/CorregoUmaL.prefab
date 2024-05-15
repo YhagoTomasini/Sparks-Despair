@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4097558130244318700}
   - component: {fileID: 4097558130244318703}
   m_Layer: 0
-  m_Name: SpawnerTronco
+  m_Name: CorregoUmaL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

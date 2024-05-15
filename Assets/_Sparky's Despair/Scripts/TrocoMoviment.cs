@@ -7,11 +7,18 @@ public class TrocoMoviment : MonoBehaviour
     public float TroncoVelo;
     public float TroncoVida;
     private float Tempo = 0f;
+    private float PosicaoI;
 
     void Start()
     {
         TroncoVelo = 1.5f;
-        TroncoVida = 12f;
+        TroncoVida = 10f;
+
+        PosicaoI = gameObject.transform.position.x;
+        if (PosicaoI > 0f)
+        {
+            transform.Rotate(0, 180, 0);
+        }
     }
 
     void FixedUpdate()
