@@ -58,7 +58,7 @@ public class ColliderMorte: MonoBehaviour
         //Vector3 QuedaDirecao = Vector3.down + Vector3.forward
         while (true)
         {
-            Player.transform.Translate((Vector3.down + Vector3.back).normalized * QuedaVelo * Time.deltaTime);
+            Player.transform.Translate((new Vector3 (0, -1, 1)).normalized * QuedaVelo * Time.deltaTime);
             yield return (null);
         }
         
