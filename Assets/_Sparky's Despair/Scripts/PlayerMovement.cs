@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AnimLegs.SetBool("LTE", true);
         }
-        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -1;
+        EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -4;
         TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
 
     }

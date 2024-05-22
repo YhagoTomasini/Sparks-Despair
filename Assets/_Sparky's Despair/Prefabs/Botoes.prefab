@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8278521064162164362}
   - component: {fileID: 1528625383}
   m_Layer: 0
-  m_Name: "Boto\u0303es"
+  m_Name: Botoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 3190675611004875497}
   - component: {fileID: 6969833974207085668}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CoAgua
   m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

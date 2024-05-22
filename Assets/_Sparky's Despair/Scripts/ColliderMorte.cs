@@ -11,12 +11,18 @@ public class ColliderMorte: MonoBehaviour
     public GameObject Olhos;
     public GameObject Luz;
     public GameObject Sombra;
+    public GameObject Player;
+    public GameObject Splash;
+
+    private float QuedaVelo;
+
     public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
 
     private void Start()
     {
         posicaoCamera = Camera.main.transform.position;
+        QuedaVelo = 4f;
     }
 
     IEnumerator MorteInimigo()
@@ -45,17 +51,29 @@ public class ColliderMorte: MonoBehaviour
 
     }
 
+    IEnumerator MorteAgua()
+    {
+        Splash.SetActive(true);
+        //AnimFire.enabled = false;
+        //Vector3 QuedaDirecao = Vector3.down + Vector3.forward
+        while (true)
+        {
+            Player.transform.Translate((Vector3.down + Vector3.back).normalized * QuedaVelo * Time.deltaTime);
+            yield return (null);
+        }
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se a colisão envolve o personagem
-        //if (other.CompareTag("Dano"))
-        //{
-        //    // Reinicia o jogo carregando a cena atual
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
         if (other.CompareTag("Dano"))
         {
             StartCoroutine(MorteInimigo());
+
+            if (other.gameObject.name == "CoAgua")
+            {
+                StartCoroutine(MorteAgua());
+            }
         }
     }
 }

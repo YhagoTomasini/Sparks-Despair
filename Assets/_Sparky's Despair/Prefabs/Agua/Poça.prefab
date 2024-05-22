@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4629210082028528034}
   - component: {fileID: 2096274331089668450}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CoAgua
   m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6084634711718607272}
   m_Layer: 0
-  m_Name: "Po\xE7a"
+  m_Name: "Poc\u0327a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
