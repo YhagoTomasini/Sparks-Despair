@@ -22,7 +22,7 @@ public class ColliderMorte: MonoBehaviour
     private void Start()
     {
         posicaoCamera = Camera.main.transform.position;
-        QuedaVelo = 4f;
+        QuedaVelo = 2f;
     }
 
     IEnumerator MorteInimigo()
@@ -54,15 +54,28 @@ public class ColliderMorte: MonoBehaviour
     IEnumerator MorteAgua()
     {
         Splash.SetActive(true);
-        //AnimFire.enabled = false;
-        //Vector3 QuedaDirecao = Vector3.down + Vector3.forward
+        Vector3 QuedaDirecao = new Vector3 (0, -1, 1);
+            //new Vector3(0, -1, 1);
         while (true)
         {
-            Player.transform.Translate((new Vector3 (0, -1, 1)).normalized * QuedaVelo * Time.deltaTime);
+            Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
             yield return (null);
         }
         
     }
+
+    IEnumerator MorteBuraco()
+    {
+        Vector3 QuedaDirecao = new Vector3(0, -1, 1);
+        //new Vector3(0, -1, 1);
+        while (true)
+        {
+            Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
+            yield return (null);
+        }
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -73,6 +86,10 @@ public class ColliderMorte: MonoBehaviour
             if (other.gameObject.name == "CoAgua")
             {
                 StartCoroutine(MorteAgua());
+            }
+            if (other.gameObject.name == "CoBuraco")
+            {
+                StartCoroutine(MorteBuraco());
             }
         }
     }

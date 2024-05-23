@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3212026769446933397}
   - component: {fileID: 2406586385958754729}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CoBuraco
   m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
