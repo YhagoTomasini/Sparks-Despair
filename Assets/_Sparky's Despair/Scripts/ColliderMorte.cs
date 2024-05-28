@@ -55,23 +55,23 @@ public class ColliderMorte: MonoBehaviour
     {
         Splash.SetActive(true);
         Vector3 QuedaDirecao = new Vector3 (0, -1, 1);
-            //new Vector3(0, -1, 1);
+
         while (true)
         {
             Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
-            yield return (null);
+            yield return null;
         }
         
     }
 
     IEnumerator MorteBuraco()
     {
-        Vector3 QuedaDirecao = new Vector3(0, -1, 1);
-        //new Vector3(0, -1, 1);
+        Vector3 QuedaDirecao = new Vector3(0, -1/2, 1);
+
         while (true)
         {
             Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
-            yield return (null);
+            yield return null;
         }
 
     }
