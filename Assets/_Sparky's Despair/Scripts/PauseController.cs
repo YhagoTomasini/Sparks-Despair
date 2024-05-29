@@ -51,8 +51,11 @@ public void Pause()
             Menujogoparado.SetActive(true);
                 // Pausa o jogo
                 Time.timeScale = 0f;
+            EventSystem.current.SetSelectedGameObject(FirstSelected3);
+
             }
-            else
+
+        else 
             {
             // Desativa a Canvas de pausa
             //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = false;

@@ -80,8 +80,13 @@ public class CanvasSwitcher : MonoBehaviour
         CanvasPause.SetActive(true);
     }
 
+    public void SwitchCanvasToPause2()
+    {
+        CanvasPause.SetActive(false);
+        CanvasGamePlay.SetActive(true);
+    }
 
-}  
-    
+}
+
 
 
