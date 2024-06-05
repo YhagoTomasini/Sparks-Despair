@@ -9,6 +9,7 @@ public class CamMoviment : MonoBehaviour
     public float CameraVelocity;
     public Score ScoreValue;
     public GameObject PoseAvCam;
+    public GameObject CamPose;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,14 @@ public class CamMoviment : MonoBehaviour
 
     public void AvancoC()
     {
-        Debug.Log("Camera movida para a posição Z do objeto PoseAvCam");
-        transform.position = new Vector3(transform.position.x, transform.position.y, PoseAvCam.transform.position.z);
+        if (CamPose != null && PoseAvCam != null)
+        {
+            Debug.Log("Camera movida para a posição Z do objeto PoseAvCam");
+            CamPose.transform.position = new Vector3(transform.position.x, transform.position.y, PoseAvCam.transform.position.z);
+        }
+        else
+        {
+            Debug.LogError("CamPose ou PoseAvCam não estão atribuídos.");
+        }
     }
 }
