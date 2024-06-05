@@ -21,11 +21,11 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("SomLigado"));
-        Debug.Log(PlayerPrefs.GetInt("SomChu"));
-        Debug.Log(PlayerPrefs.GetInt("SomFo"));
-        Debug.Log(PlayerPrefs.GetInt("SomPa"));
-        Debug.Log(PlayerPrefs.GetInt("SomTro"));
+        //Debug.Log(PlayerPrefs.GetInt("SomLigado"));
+        //Debug.Log(PlayerPrefs.GetInt("SomChu"));
+        //Debug.Log(PlayerPrefs.GetInt("SomFo"));
+        //Debug.Log(PlayerPrefs.GetInt("SomPa"));
+        //Debug.Log(PlayerPrefs.GetInt("SomTro"));
 
         // Verifica se a tecla "m" foi pressionada
         if (Input.GetKeyDown(KeyCode.M))

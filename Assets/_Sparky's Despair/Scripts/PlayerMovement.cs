@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         if (QualLeg % 2 == 0)
         {
             AnimLegs.SetBool("LFD", true);
-            Debug.Log("par");
+            //Debug.Log("par");
         }
         if (QualLeg % 2 != 0)
         {
