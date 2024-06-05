@@ -9,17 +9,15 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    // Referência para o AudioSource principal do jogo
+    // Referência para os AudioSource do jogo
     public AudioSource mainAudioSource;
     public AudioSource chuvas;
     public AudioSource fogo;
     public AudioSource passos;
     public AudioSource trova;
 
-
     public Toggle musics;
     public Toggle effect;
-
 
     private void Update()
     {
@@ -28,217 +26,126 @@ public class AudioManager : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt("SomFo"));
         Debug.Log(PlayerPrefs.GetInt("SomPa"));
         Debug.Log(PlayerPrefs.GetInt("SomTro"));
+
+        // Verifica se a tecla "m" foi pressionada
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ResetAllSounds();
+        }
     }
 
     private void Start()
     {
-        //PlayerPrefs.SetInt("SomTest", 1);
-        //   ToggleMute();
+        MuteAudioSource(mainAudioSource, "SomLigado", musics);
+        MuteAudioSource(chuvas, "SomChu", effect);
+        MuteAudioSource(fogo, "SomFo", effect);
+        MuteAudioSource(passos, "SomPa", effect);
+        MuteAudioSource(trova, "SomTro", effect);
+    }
 
-        if (PlayerPrefs.GetInt("SomLigado") == 0)
+    private void MuteAudioSource(AudioSource audioSource, string playerPrefKey, Toggle toggle)
+    {
+        if (audioSource != null)
         {
-            mainAudioSource.mute = false;
-        }
-       else if (PlayerPrefs.GetInt("SomLigado") == 1)
-        {
-
-            mainAudioSource.mute = true;
-            musics.SetIsOnWithoutNotify(false);
-            // ToggleMute();
-        }
-
-        if (PlayerPrefs.GetInt("SomChu") == 0)
-        {
-            chuvas.mute = false;
-        }
-        else if (PlayerPrefs.GetInt("SomChu") == 1)
-        {
-
-            chuvas.mute = true;
-            effect.SetIsOnWithoutNotify(false);
-            // ToggleMute();
-        }
-
-        if (PlayerPrefs.GetInt("SomFo") == 0)
-        {
-            fogo.mute = false;
-        }
-        else if (PlayerPrefs.GetInt("SomFo") == 1)
-        {
-
-            fogo.mute = true;
-            effect.SetIsOnWithoutNotify(false);
-            // ToggleMute();
-        }
-
-
-        if (PlayerPrefs.GetInt("SomPa") == 0)
-        {
-            passos.mute = false;
-        }
-        else if (PlayerPrefs.GetInt("SomPa") == 1)
-        {
-
-            passos.mute = true;
-            effect.SetIsOnWithoutNotify(false);
-            // ToggleMute();
-        }
-
-
-        if (PlayerPrefs.GetInt("SomTro") == 0)
-        {
-            trova.mute = false;
-        }
-        else if (PlayerPrefs.GetInt("SomTro") == 1)
-        {
-
-            trova.mute = true;
-            effect.SetIsOnWithoutNotify(false);
-            // ToggleMute();
+            if (PlayerPrefs.GetInt(playerPrefKey) == 0)
+            {
+                audioSource.mute = false;
+            }
+            else if (PlayerPrefs.GetInt(playerPrefKey) == 1)
+            {
+                audioSource.mute = true;
+                if (toggle != null)
+                {
+                    toggle.SetIsOnWithoutNotify(false);
+                }
+            }
         }
     }
 
-    // Méto para alternar entre mutar e desmutar o som
+    // Método para alternar entre mutar e desmutar o som
     public void ToggleMute()
     {
-        if (PlayerPrefs.GetInt("SomLigado") == 0)
-        {
-            PlayerPrefs.SetInt("SomLigado", 1);
-            // Inverte o estado de mudo do AudioSource principal
-            mainAudioSource.mute = !mainAudioSource.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-        else if(PlayerPrefs.GetInt("SomLigado") == 1)
-        {
-            PlayerPrefs.SetInt("SomLigado", 0);
-            // Inverte o estado de mudo do AudioSource principal
-            mainAudioSource.mute = !mainAudioSource.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-
+        ToggleMuteAudioSource(mainAudioSource, "SomLigado");
     }
 
-    // Méto para definir explicitamente o som ligado ou desligado
+    // Método para definir explicitamente o som ligado ou desligado
     public void SetMute(bool isMuted)
     {
-        // Define o estado de mudo do AudioSource principal conforme o argumento
         mainAudioSource.mute = isMuted;
     }
 
     public void ToggleMuteC()
     {
-        if (PlayerPrefs.GetInt("SomChu") == 0)
-        {
-            PlayerPrefs.SetInt("SomChu", 1);
-            // Inverte o estado de mudo do AudioSource principal
-            chuvas.mute = !chuvas.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-        else if (PlayerPrefs.GetInt("SomChu") == 1)
-        {
-            PlayerPrefs.SetInt("SomChu", 0);
-            // Inverte o estado de mudo do AudioSource principal
-            chuvas.mute = !chuvas.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
+        ToggleMuteAudioSource(chuvas, "SomChu");
     }
 
-    // Méto para definir explicitamente o som ligado ou desligado
     public void SetMuteC(bool isMuted)
     {
-        // Define o estado de mudo do AudioSource principal conforme o argumento
         chuvas.mute = isMuted;
     }
+
     public void ToggleMuteF()
     {
-        if (PlayerPrefs.GetInt("SomFo") == 0)
-        {
-            PlayerPrefs.SetInt("SomFo", 1);
-            // Inverte o estado de mudo do AudioSource principal
-            fogo.mute = !fogo.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-        else if (PlayerPrefs.GetInt("SomFo") == 1)
-        {
-            PlayerPrefs.SetInt("SomFo", 0);
-            // Inverte o estado de mudo do AudioSource principal
-            fogo.mute = !fogo.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
+        ToggleMuteAudioSource(fogo, "SomFo");
     }
 
-    // Méto para definir explicitamente o som ligado ou desligado
     public void SetMuteF(bool isMuted)
     {
-        // Define o estado de mudo do AudioSource principal conforme o argumento
         fogo.mute = isMuted;
     }
+
     public void ToggleMuteP()
     {
-        if (PlayerPrefs.GetInt("SomPa") == 0)
-        {
-            PlayerPrefs.SetInt("SomPa", 1);
-            // Inverte o estado de mudo do AudioSource principal
-            passos.mute = !passos.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-        else if (PlayerPrefs.GetInt("SomPa") == 1)
-        {
-            PlayerPrefs.SetInt("SomPa", 0);
-            // Inverte o estado de mudo do AudioSource principal
-            passos.mute = !passos.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-        
+        ToggleMuteAudioSource(passos, "SomPa");
     }
 
-    // Méto para definir explicitamente o som ligado ou desligado
     public void SetMuteP(bool isMuted)
     {
-        // Define o estado de mudo do AudioSource principal conforme o argumento
         passos.mute = isMuted;
     }
+
     public void ToggleMuteT()
     {
-        if (PlayerPrefs.GetInt("SomTro") == 0)
-        {
-            PlayerPrefs.SetInt("SomTro", 1);
-            // Inverte o estado de mudo do AudioSource principal
-            trova.mute = !trova.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-
-        else if (PlayerPrefs.GetInt("SomTro") == 1)
-        {
-            PlayerPrefs.SetInt("SomTro", 0);
-            // Inverte o estado de mudo do AudioSource principal
-            trova.mute = !trova.mute;
-            //btnTest.isOn = true;
-            //btnTest.isOn = false;
-        }
-       
+        ToggleMuteAudioSource(trova, "SomTro");
     }
 
-    // Méto para definir explicitamente o som ligado ou desligado
     public void SetMuteT(bool isMuted)
     {
-        // Define o estado de mudo do AudioSource principal conforme o argumento
         trova.mute = isMuted;
+    }
+
+    private void ToggleMuteAudioSource(AudioSource audioSource, string playerPrefKey)
+    {
+        if (audioSource != null)
+        {
+            int newPrefValue = PlayerPrefs.GetInt(playerPrefKey) == 0 ? 1 : 0;
+            PlayerPrefs.SetInt(playerPrefKey, newPrefValue);
+            audioSource.mute = !audioSource.mute;
+        }
+    }
+
+    // Método para resetar todas as configurações de som e ligar todos os sons
+    public void ResetAllSounds()
+    {
+        PlayerPrefs.SetInt("SomLigado", 0);
+        PlayerPrefs.SetInt("SomChu", 0);
+        PlayerPrefs.SetInt("SomFo", 0);
+        PlayerPrefs.SetInt("SomPa", 0);
+        PlayerPrefs.SetInt("SomTro", 0);
+
+        if (musics != null)
+        {
+            musics.SetIsOnWithoutNotify(true);
+        }
+        if (effect != null)
+        {
+            effect.SetIsOnWithoutNotify(true);
+        }
+
+        mainAudioSource.mute = false;
+        chuvas.mute = false;
+        fogo.mute = false;
+        passos.mute = false;
+        trova.mute = false;
     }
 }

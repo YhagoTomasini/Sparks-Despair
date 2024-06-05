@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator AnimEyes;
     public int QualLeg;
 
+    public AudioSource Pat;
+    public AudioClip SomPat;
+
     public bool NoTronco;
 
     void Start()
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         AnimLegs.SetBool("LTD", false);
         AnimLegs.SetBool("LTE", false);
         AnimEyes.SetBool("movendo", false);
+
     }
 
     void MovendoFrente()
@@ -65,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
         EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = 2;
         TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
 
+        Pat.PlayOneShot(SomPat);
+
     }
 
     void MovendoTraz()
@@ -79,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
         }
         EyesOrdem.GetComponent<SpriteRenderer>().sortingOrder = -4;
         TopFlip.GetComponent<Transform>().Rotate(0, 180, 0);
+
+        Pat.PlayOneShot(SomPat);
 
     }
 

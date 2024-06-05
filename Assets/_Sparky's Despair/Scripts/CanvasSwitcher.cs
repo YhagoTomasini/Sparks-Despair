@@ -46,6 +46,8 @@ public class CanvasSwitcher : MonoBehaviour
         CanvasStart.SetActive(true);
         CanvasGamePlay.SetActive(false);
 
+
+        EventSystem.current.SetSelectedGameObject(FirstSelected2);
         // Alterna a visibilidade das Canvas
         // canvas1.gameObject.SetActive(!canvas1.gameObject.activeSelf);
         //   canvas2.gameObject.SetActive(!canvas2.gameObject.activeSelf);

@@ -19,6 +19,9 @@ public class ColliderMorte: MonoBehaviour
     public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
 
+    public AudioSource SoprodaMorte;
+    public AudioClip SomSopro;
+
     private void Start()
     {
         posicaoCamera = Camera.main.transform.position;
@@ -39,6 +42,8 @@ public class ColliderMorte: MonoBehaviour
         Sombra.GetComponent<SpriteRenderer>().enabled = false;
 
         AnimLegs.SetBool("Morto", true);
+
+        SoprodaMorte.PlayOneShot(SomSopro);
 
         Camera.main.GetComponent<CamMoviment>().enabled = false;
         Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
