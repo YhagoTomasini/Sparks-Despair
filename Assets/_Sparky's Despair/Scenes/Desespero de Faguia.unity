@@ -5576,7 +5576,6 @@ MonoBehaviour:
   Cammove: 0
   CameraVelocity: 1
   ScoreValue: {fileID: 485708687}
-  PoseAvCam: {fileID: 2030769364}
 --- !u!114 &291340476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5757,7 +5756,6 @@ MonoBehaviour:
   Cammove: 0
   CameraVelocity: 1
   ScoreValue: {fileID: 485708687}
-  PoseAvCam: {fileID: 2030769364}
 --- !u!4 &483453467
 Transform:
   m_ObjectHideFlags: 0
@@ -13382,6 +13380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443b659f008af4f70b06b2c204ba4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CamPose: {fileID: 291340470}
+  moveSpeed: 1
 --- !u!65 &2030769366
 BoxCollider:
   m_ObjectHideFlags: 0

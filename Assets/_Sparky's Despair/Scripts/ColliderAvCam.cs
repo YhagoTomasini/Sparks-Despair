@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class ColliderAvCam : MonoBehaviour
 {
-    // Declaração do delegate e do evento
-    public delegate void AvancoC();
-    public event AvancoC AtivarAvCam;
+    public GameObject CamPose;
+    public float moveSpeed = -1f;
 
-    // Método chamado quando algo entra no collider
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        // Verifica se o objeto que entrou no collider é o jogador
         if (other.CompareTag("Player"))
         {
-            // Se for o jogador, dispara o evento
-            Debug.Log("Player entrou no collider");
-            OnAtivarAvCam(); // Invoca o método para disparar o evento
+            StartCoroutine(MoveCameraUntilPlayerIsOut(other));
         }
     }
 
-    // Método para disparar o evento
-    protected virtual void OnAtivarAvCam()
+    private IEnumerator MoveCameraUntilPlayerIsOut(Collider playerCollider)
     {
-        // Verifica se há assinantes para o evento
-        if (AtivarAvCam != null)
+        while (true)
         {
-            // Se houver assinantes, dispara o evento
-            AtivarAvCam();
+            // Mover a câmera para frente
+            CamPose.transform.position = new Vector3(CamPose.transform.position.x, CamPose.transform.position.y, 1-CamPose.transform.position.z);
+
+            // Verificar se o jogador ainda está colidindo com o objeto
+            if (!playerCollider.bounds.Intersects(GetComponent<Collider>().bounds))
+            {
+                break;
+            }
+
+            // Esperar até o próximo frame
+            yield return null;
         }
     }
 }
