@@ -5,30 +5,31 @@ using UnityEngine;
 public class ColliderAvCam : MonoBehaviour
 {
     public GameObject CamPose;
-    public float moveSpeed = -1f;
+    public GameObject ChuPose;
+    public float moveSpeed = -3f;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(MoveCameraUntilPlayerIsOut(other));
+            StartCoroutine(MoveCam(other));
         }
     }
 
-    private IEnumerator MoveCameraUntilPlayerIsOut(Collider playerCollider)
+    private IEnumerator MoveCam(Collider playerCollider)
     {
         while (true)
         {
-            // Mover a câmera para frente
-            CamPose.transform.position = new Vector3(CamPose.transform.position.x, CamPose.transform.position.y, 1-CamPose.transform.position.z);
+            //CamPose.transform.position = new Vector3(CamPose.transform.position.x, CamPose.transform.position.y, 1-CamPose.transform.position.z);
+            CamPose.transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
+            ChuPose.transform.position -= new Vector3(0, 0, moveSpeed * Time.deltaTime);
 
-            // Verificar se o jogador ainda está colidindo com o objeto
+
             if (!playerCollider.bounds.Intersects(GetComponent<Collider>().bounds))
             {
                 break;
             }
 
-            // Esperar até o próximo frame
             yield return null;
         }
     }

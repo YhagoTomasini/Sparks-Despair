@@ -22,63 +22,78 @@ public class ColliderMorte: MonoBehaviour
     public AudioSource SoprodaMorte;
     public AudioClip SomSopro;
 
+    private bool morto;
+
     private void Start()
     {
+        morto = false;
         posicaoCamera = Camera.main.transform.position;
         QuedaVelo = 2f;
     }
 
     IEnumerator MorteInimigo()
     {
+        if (morto == false)
+        {
+            gameObject.transform.parent.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = false;
 
-        gameObject.transform.parent.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = false;
+            Luz.SetActive(false);
 
-        Luz.SetActive(false);
+            Olhos.SetActive(false);
+            AnimFire.SetBool("Apagou", true);
+            AnimVida.enabled = false;
 
-        Olhos.SetActive(false);
-        AnimFire.SetBool("Apagou", true);
-        AnimVida.enabled = false;
+            Sombra.GetComponent<SpriteRenderer>().enabled = false;
 
-        Sombra.GetComponent<SpriteRenderer>().enabled = false;
+            AnimLegs.SetBool("Morto", true);
 
-        AnimLegs.SetBool("Morto", true);
+            SoprodaMorte.PlayOneShot(SomSopro);
 
-        SoprodaMorte.PlayOneShot(SomSopro);
+            morto = true;
 
-        Camera.main.GetComponent<CamMoviment>().enabled = false;
-        Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
-        Camera.main.transform.position = novaPosicaoCam;
-
-        yield return new WaitForSeconds(5);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Camera.main.GetComponent<CamMoviment>().enabled = false;
+            Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
+            Camera.main.transform.position = novaPosicaoCam;
 
 
+            yield return new WaitForSeconds(5);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            morto = false;
+        }
+        
     }
 
     IEnumerator MorteAgua()
     {
-        Splash.SetActive(true);
-        Vector3 QuedaDirecao = new Vector3 (0, -1, 1);
-
-        while (true)
+        if (morto == true)
         {
-            Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
-            yield return null;
+            Splash.SetActive(true);
+            Vector3 QuedaDirecao = new Vector3(0, -1, 1);
+
+            while (true)
+            {
+                Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
+                yield return null;
+            }
         }
+            
         
     }
 
     IEnumerator MorteBuraco()
     {
-        Vector3 QuedaDirecao = new Vector3(0, -1/2, 1);
-
-        while (true)
+        if (morto == true)
         {
-            Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
-            yield return null;
-        }
+            Vector3 QuedaDirecao = new Vector3(0, -1 / 2, 1);
 
+            while (true)
+            {
+                Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
+                yield return null;
+            }
+        }
+       
     }
 
 
