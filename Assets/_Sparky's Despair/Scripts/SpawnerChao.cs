@@ -18,7 +18,7 @@ public class SpawnerChao : MonoBehaviour
         despawnDistancia = 60f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         GameObject[] Deletechao = GameObject.FindGameObjectsWithTag("tagchao");
 
@@ -42,7 +42,7 @@ public class SpawnerChao : MonoBehaviour
         int randomIndex = Random.Range(0, chaoOpcao.Length);
         GameObject chaoPrefab = chaoOpcao[randomIndex];
 
-        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, camPosicaoI + spawnDistancia);
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, Mathf.Round(camPosicaoI + spawnDistancia));
         Quaternion rotation = Quaternion.Euler(90, 0, 0);
         GameObject Novochao = Instantiate(chaoPrefab, transform.position, rotation);
 

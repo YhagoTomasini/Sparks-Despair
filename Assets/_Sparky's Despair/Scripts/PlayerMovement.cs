@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
         QualLeg++;
 
-        Invoke("gambiarra", .3f);
+        Invoke("gambiarra", .25f);
     }
 
     void flip()
@@ -140,12 +140,16 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        transform.position = new Vector3(Mathf.Round(transform.position.x), 0.8f, Mathf.Round(transform.position.z));
 
         dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
 
         if (dirX != 0 && dirZ != 0)
-            Debug.Log("fds");
+        {
+
+        }
+           //Debug.Log("fds");
 
         else if (dirX != 0 || dirZ != 0)
         {
