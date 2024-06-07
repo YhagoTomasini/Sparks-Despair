@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class animation : MonoBehaviour
 {
-    public GameObject[] layers; // Array de renderizadores de sprite para as camadas do personagem
-    public float[] movementRange; // Distância máxima de movimento para cima e para baixo
-    public float[] movementSpeed; // Velocidade de movimento
+    public GameObject[] layers; 
+    public float[] movementRange; 
+    public float[] movementSpeed; 
 
-    private Vector3[] originalPositions; // Posições originais das camadas do personagem
+    private Vector3[] originalPositions; 
 
     private void Start()
     {
-        // Salva as posições originais das camadas
+        
         originalPositions = new Vector3[layers.Length];
         for (int i = 0; i < layers.Length; i++)
         {
@@ -22,7 +22,7 @@ public class animation : MonoBehaviour
 
     private void Update()
     {
-        // Movimenta as camadas para cima e para baixo ao longo do tempo
+        
 
         for (int i = 0; i < layers.Length; i++)
         {
