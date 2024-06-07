@@ -5,6 +5,7 @@ using UnityEngine;
 public class SomdeInicio : MonoBehaviour
 {
     public GameObject Iniciar;
+    public GameObject CamI;
     public AudioSource SomI;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class SomdeInicio : MonoBehaviour
         yield return new WaitForSeconds(5.5f);
 
         Iniciar.SetActive(true);
+        CamI.SetActive(false);
 
         yield return new WaitForSeconds(.5f);
 
@@ -30,10 +32,13 @@ public class SomdeInicio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Iniciar.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        if (/*Iniciar.activeSelf &&*/ Input.GetKeyDown(KeyCode.Space))
         {
 
             Iniciar.SetActive(true);
+            CamI.SetActive(false);
+            gameObject.SetActive(false);
+
 
             if (SomI.isPlaying)
             {

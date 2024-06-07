@@ -20,7 +20,6 @@ public class PauseController : MonoBehaviour
 
     void Update()
     {
-        // Verifica se a tecla 'Esc' foi pressionada para pausar o jogo
         if (Input.GetKeyDown(KeyCode.P))
         {
             Pause();
@@ -35,25 +34,25 @@ public class PauseController : MonoBehaviour
     }
 
 
-public void Pause()
-     {
+    public void Pause()
+    {
 
         
-            // Alterna o estado de pausa
-            isPaused = !isPaused;
+        // Alterna o estado de pausa
+        isPaused = !isPaused;
 
-            // Se o jogo estiver em pausa, ativa a Canvas de pausa
-            if (isPaused)
-            {
-            // Ativa a Canvas de pausa
-            //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
+        // Se o jogo estiver em pausa, ativa a Canvas de pausa
+        if (isPaused)
+        {
+        // Ativa a Canvas de pausa
+        //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
 
-            Menujogoparado.SetActive(true);
-                // Pausa o jogo
-                Time.timeScale = 0f;
-            EventSystem.current.SetSelectedGameObject(FirstSelected3);
+        Menujogoparado.SetActive(true);
+            // Pausa o jogo
+            Time.timeScale = 0f;
+        EventSystem.current.SetSelectedGameObject(FirstSelected3);
 
-            }
+    }
 
         else 
             {
