@@ -8,6 +8,8 @@ public class ColliderMorte: MonoBehaviour
 {
     public Animator AnimFire;
     public Animator AnimLegs;
+    public Animator Queda;
+
     public GameObject Olhos;
     public GameObject Luz;
     public GameObject Sombra;
@@ -69,13 +71,17 @@ public class ColliderMorte: MonoBehaviour
         if (morto == true)
         {
             Splash.SetActive(true);
-            Vector3 QuedaDirecao = new Vector3(0, -1, 1);
 
-            while (true)
+            Queda.SetBool("caindo", true);
+            yield return null;
+
+            //Vector3 QuedaDirecao = new Vector3(0, -1, 1);
+
+            /*while (true)
             {
-                Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
+               Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
                 yield return null;
-            }
+            }*/
         }
             
         
@@ -85,13 +91,19 @@ public class ColliderMorte: MonoBehaviour
     {
         if (morto == true)
         {
-            Vector3 QuedaDirecao = new Vector3(0, -1 / 2, 1);
+            Queda.SetBool("caindo", true);
+            yield return null;
 
-            while (true)
+
+
+            //Vector3 QuedaDirecao = new Vector3(0, -1 / 2, 1);
+
+            /*while (true)
             {
                 Player.transform.Translate(QuedaDirecao * QuedaVelo * Time.deltaTime);
+
                 yield return null;
-            }
+            }*/
         }
        
     }
