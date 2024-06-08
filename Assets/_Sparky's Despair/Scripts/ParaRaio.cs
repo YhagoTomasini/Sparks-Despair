@@ -16,9 +16,10 @@ public class ParaRaio : MonoBehaviour
 
     void Start()
     {
+        raioAativar.SetActive(false);
 
-        IntervaloMin = 2f;
-        IntervaloMax = 6f;
+        IntervaloMin = 4f;
+        IntervaloMax = 8f;
 
         QuemTroveja = GetComponent<AudioSource>();
 

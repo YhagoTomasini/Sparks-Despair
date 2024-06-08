@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raioAativar: {fileID: 6810044542269889042}
-  luzRaio: {fileID: 0}
+  luzRaio: {fileID: 4954270403563926740, guid: fba5129a14c968743976addeb2a6b45a, type: 3}
   IntervaloMin: 0
   IntervaloMax: 0
   Trovao:
@@ -248,7 +248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6810044542269889041
 Transform:
   m_ObjectHideFlags: 0

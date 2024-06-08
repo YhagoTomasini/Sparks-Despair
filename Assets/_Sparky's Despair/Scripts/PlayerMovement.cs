@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public bool podeMoverParaDireita = false;
     public bool podeMoverParaCima = false;
     public bool podeMoverParaBaixo = false;
+
+    public bool noTronco = false;
 
     public GameObject personagemquevira;
     public GameObject EyesOrdem;
@@ -140,7 +143,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.position = new Vector3(Mathf.Round(transform.position.x), 0.8f, Mathf.Round(transform.position.z));
+        if (noTronco == false)
+        {
+            transform.position = new Vector3(Mathf.Round(transform.position.x), 0.8f, Mathf.Round(transform.position.z));
+        }
+        
 
         dirX = Input.GetAxis("Horizontal");
         dirZ = Input.GetAxis("Vertical");
@@ -160,7 +167,6 @@ public class PlayerMovement : MonoBehaviour
 
             }
 
-        }
-
+        }            
     }
 }
