@@ -11696,7 +11696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &932220235
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12161,6 +12161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TheCanva
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586561491406462669, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4912734747099060059, guid: 61ce7c823e1274fb88a253e3fb9786c3,
         type: 3}
@@ -18946,7 +18951,7 @@ PrefabInstance:
     - target: {fileID: 1795787802670527681, guid: 8f6a8b3bc77e84953a71d01e1d7680f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1795787802670527681, guid: 8f6a8b3bc77e84953a71d01e1d7680f1,
         type: 3}
@@ -19035,7 +19040,7 @@ PrefabInstance:
     - target: {fileID: 4256006442450041319, guid: c3b6befcb60ff9d4caee4fbe0844eb42,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4256006442450041319, guid: c3b6befcb60ff9d4caee4fbe0844eb42,
         type: 3}
