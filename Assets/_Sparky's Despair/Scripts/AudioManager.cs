@@ -36,6 +36,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        SoundPrefs();
+    }
+
+    public void SoundPrefs()
+    {
         MuteAudioSource(mainAudioSource, "SomLigado", musics);
         MuteAudioSource(chuvas, "SomChu", effect);
         MuteAudioSource(fogo, "SomFo", effect);
@@ -48,7 +53,6 @@ public class AudioManager : MonoBehaviour
         MuteAudioSource(passos, "SomPa", effectP);
         MuteAudioSource(trova, "SomTro", effectP);
     }
-
     private void MuteAudioSource(AudioSource audioSource, string playerPrefKey, Toggle toggle)
     {
         if (audioSource != null)

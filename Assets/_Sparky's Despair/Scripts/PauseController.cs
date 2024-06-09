@@ -44,10 +44,10 @@ public class PauseController : MonoBehaviour
         // Se o jogo estiver em pausa, ativa a Canvas de pausa
         if (isPaused)
         {
-        // Ativa a Canvas de pausa
-        //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
+            // Ativa a Canvas de pausa
+            //     Menujogoparado.gameObject.GetComponent<Canvas>().enabled = true;
 
-        Menujogoparado.SetActive(true);
+            Menujogoparado.SetActive(true);
             // Pausa o jogo
             Time.timeScale = 0f;
         EventSystem.current.SetSelectedGameObject(FirstSelected3);

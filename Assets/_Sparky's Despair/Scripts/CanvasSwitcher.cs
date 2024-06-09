@@ -21,10 +21,11 @@ public class CanvasSwitcher : MonoBehaviour
     public GameObject Firstselected3;
     public GameObject Firstselected4;
 
+    public AudioManager audioM;
 
     private void Start()
     {
-
+        audioM = FindObjectOfType<AudioManager>();
         SwitchCanvasToStart1();
     }
 
@@ -68,6 +69,8 @@ public class CanvasSwitcher : MonoBehaviour
     {
         CanvasStart.SetActive(false);
         CanvasSom.SetActive(true);
+        audioM.SoundPrefs();
+
         EventSystem.current.SetSelectedGameObject(FirstSelected1);
     }
 
@@ -84,6 +87,7 @@ public class CanvasSwitcher : MonoBehaviour
     {
         CanvasGamePlay.SetActive(false);
         CanvasPause.SetActive(true);
+        audioM.SoundPrefs(); 
     }
 
     public void SwitchCanvasToPause2()

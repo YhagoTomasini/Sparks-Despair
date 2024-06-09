@@ -11847,6 +11847,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7666444296309466871, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666444296309466874, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666444297187766593, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666444297187766594, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666444297187766597, guid: 61ce7c823e1274fb88a253e3fb9786c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7666444297401442579, guid: 61ce7c823e1274fb88a253e3fb9786c3,
         type: 3}
       propertyPath: fogo

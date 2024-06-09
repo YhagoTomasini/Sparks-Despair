@@ -11,7 +11,7 @@ public class TrocoMoviment : MonoBehaviour
 
     void Start()
     {
-        TroncoVelo = 1.5f;
+        TroncoVelo = 2f;
         TroncoVida = 10f;
 
         PosicaoI = gameObject.transform.position.x;

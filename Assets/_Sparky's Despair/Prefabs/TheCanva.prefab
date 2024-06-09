@@ -2511,7 +2511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7666444296309466870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2545,7 +2545,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7666444296309466874}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -5381,7 +5381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7666444297187766592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5417,7 +5417,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7666444297187766597}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -6387,6 +6387,8 @@ MonoBehaviour:
   trova: {fileID: 0}
   musics: {fileID: 0}
   effect: {fileID: 0}
+  musicsP: {fileID: 0}
+  effectP: {fileID: 0}
 --- !u!1 &7666444297415506136
 GameObject:
   m_ObjectHideFlags: 0
