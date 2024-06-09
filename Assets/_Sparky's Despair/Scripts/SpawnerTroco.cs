@@ -20,15 +20,14 @@ public class SpawnerTroco : MonoBehaviour
 
     IEnumerator SpawnTronco()
     {
-        Instantiate(Tronco, transform.position, Quaternion.identity);
+        TempoSpawn = Random.Range(0.5f, 3f);
 
+        yield return new WaitForSeconds(TempoSpawn);
+
+        Instantiate(Tronco, transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(TempoEntre);
 
-        TempoSpawn = Random.Range(0.5f, 5f);
-
-        yield return new WaitForSeconds(TempoSpawn);
-        
         StartCoroutine(SpawnTronco());
 
     }

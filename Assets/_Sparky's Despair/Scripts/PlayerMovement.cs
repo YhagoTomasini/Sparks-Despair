@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
         QualLeg++;
 
-        Invoke("gambiarra", .25f);
+        Invoke("gambiarra", .3f);
     }
 
     void flip()

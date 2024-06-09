@@ -6,7 +6,7 @@ public class ColliderAvCam : MonoBehaviour
 {
     public GameObject CamPose;
     public GameObject ChuPose;
-    public float moveSpeed = -3f;
+    public float moveSpeed = -4f;
 
     private void OnTriggerEnter(Collider other)
     {

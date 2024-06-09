@@ -5,8 +5,9 @@ using UnityEngine;
 public class ParaRaio : MonoBehaviour
 {
     public GameObject raioAativar;
+    public GameObject raioAlerta;
 
-    public Light luzRaio;
+    private Light luzRaio;
 
     public float IntervaloMin;
     public float IntervaloMax;
@@ -16,7 +17,10 @@ public class ParaRaio : MonoBehaviour
 
     void Start()
     {
+        luzRaio = GameObject.Find("LuzRaio").GetComponent<Light>();
+
         raioAativar.SetActive(false);
+        raioAlerta.SetActive(false);
 
         IntervaloMin = 4f;
         IntervaloMax = 8f;
@@ -33,8 +37,21 @@ public class ParaRaio : MonoBehaviour
             float Intervalo = Random.Range(IntervaloMin, IntervaloMax);
             yield return new WaitForSeconds(Intervalo);
 
-            raioAativar.SetActive(true);
+            raioAlerta.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            raioAlerta.SetActive(false);
+            yield return new WaitForSeconds(0.2f);
+            raioAlerta.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            raioAlerta.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
+            raioAlerta.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+            raioAlerta.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
 
+
+            raioAativar.SetActive(true);
             luzRaio.enabled = true;
 
             AudioClip TrovaodaVez = Trovao[Random.Range(0, Trovao.Length)];
