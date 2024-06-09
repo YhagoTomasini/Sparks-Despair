@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324654121731455144}
-  - component: {fileID: 1324654121731455145}
+  - component: {fileID: 8184323901927266441}
   - component: {fileID: 1299870099}
   m_Layer: 0
   m_Name: SpawnerCat
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1324654121731455145
+--- !u!114 &8184323901927266441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
