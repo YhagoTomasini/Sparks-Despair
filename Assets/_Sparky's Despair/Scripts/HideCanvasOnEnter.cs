@@ -9,7 +9,7 @@ public class HideCanvasOnEnter : MonoBehaviour
     public GameObject RainGame;
 
     // Flag para verificar se o enter foi pressionado
-    private bool enterPressed = false;
+    //private bool enterPressed = false;
 
     void Update()
     {
@@ -20,7 +20,7 @@ public class HideCanvasOnEnter : MonoBehaviour
 
         if (Input.GetButton("Jump")){ 
         // Marca o enter como pressionado para não processar novamente
-            enterPressed = true;
+            //enterPressed = true;
 
             CamGame.GetComponent<CamMoviment>().Cammove = true;
             RainGame.GetComponent<CamMoviment>().Cammove = true;

@@ -86,6 +86,8 @@ public class CanvasSwitcher : MonoBehaviour
     {
         CanvasPause.SetActive(false);
         CanvasGamePlay.SetActive(true);
+        Time.timeScale = 1f;
+
     }
 
 }
