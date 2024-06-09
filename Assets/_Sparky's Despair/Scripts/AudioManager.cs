@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    // Referência para os AudioSource do jogo
     public AudioSource mainAudioSource;
     public AudioSource chuvas;
     public AudioSource fogo;
@@ -18,6 +17,8 @@ public class AudioManager : MonoBehaviour
 
     public Toggle musics;
     public Toggle effect;
+    public Toggle musicsP;
+    public Toggle effectP;
 
     private void Update()
     {
@@ -27,7 +28,6 @@ public class AudioManager : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetInt("SomPa"));
         //Debug.Log(PlayerPrefs.GetInt("SomTro"));
 
-        // Verifica se a tecla "m" foi pressionada
         if (Input.GetKeyDown(KeyCode.M))
         {
             ResetAllSounds();
@@ -41,6 +41,12 @@ public class AudioManager : MonoBehaviour
         MuteAudioSource(fogo, "SomFo", effect);
         MuteAudioSource(passos, "SomPa", effect);
         MuteAudioSource(trova, "SomTro", effect);
+
+        MuteAudioSource(mainAudioSource, "SomLigado", musicsP);
+        MuteAudioSource(chuvas, "SomChu", effectP);
+        MuteAudioSource(fogo, "SomFo", effectP);
+        MuteAudioSource(passos, "SomPa", effectP);
+        MuteAudioSource(trova, "SomTro", effectP);
     }
 
     private void MuteAudioSource(AudioSource audioSource, string playerPrefKey, Toggle toggle)
@@ -140,6 +146,15 @@ public class AudioManager : MonoBehaviour
         if (effect != null)
         {
             effect.SetIsOnWithoutNotify(true);
+        }
+
+        if (musicsP != null)
+        {
+            musicsP.SetIsOnWithoutNotify(true);
+        }
+        if (effectP != null)
+        {
+            effectP.SetIsOnWithoutNotify(true);
         }
 
         mainAudioSource.mute = false;

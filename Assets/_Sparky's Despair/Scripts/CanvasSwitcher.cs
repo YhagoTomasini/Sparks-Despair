@@ -15,9 +15,12 @@ public class CanvasSwitcher : MonoBehaviour
     public GameObject CanvasGamePlay;
     public GameObject CanvasSom;
     public GameObject CanvasPause;
+    public GameObject CanvasCredit;
     public GameObject FirstSelected1;
     public GameObject FirstSelected2;
     public GameObject Firstselected3;
+    public GameObject Firstselected4;
+
 
     private void Start()
     {
@@ -70,6 +73,7 @@ public class CanvasSwitcher : MonoBehaviour
 
     public void SwitchCanvasToStart2()
     {
+        CanvasCredit.SetActive(false);
         CanvasSom.SetActive(false);
         CanvasStart.SetActive(true);
         EventSystem.current.SetSelectedGameObject(FirstSelected2);
@@ -88,6 +92,13 @@ public class CanvasSwitcher : MonoBehaviour
         CanvasGamePlay.SetActive(true);
         Time.timeScale = 1f;
 
+    }
+
+    public void SwitchCanvasToCredits()
+    {
+        CanvasStart.SetActive(false);
+        CanvasCredit.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(Firstselected4);
     }
 
 }
