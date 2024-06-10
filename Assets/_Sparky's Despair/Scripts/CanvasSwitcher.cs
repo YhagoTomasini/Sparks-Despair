@@ -16,10 +16,13 @@ public class CanvasSwitcher : MonoBehaviour
     public GameObject CanvasSom;
     public GameObject CanvasPause;
     public GameObject CanvasCredit;
+    public GameObject CanvasDeath;
+
     public GameObject FirstSelected1;
     public GameObject FirstSelected2;
     public GameObject Firstselected3;
     public GameObject Firstselected4;
+    public GameObject Firstselected5;
 
     public AudioManager audioM;
 
@@ -105,6 +108,12 @@ public class CanvasSwitcher : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(Firstselected4);
     }
 
+    public void SwitchCanvasDeath()
+    {
+        CanvasGamePlay.SetActive(false);
+        CanvasDeath.SetActive(true);
+        EventSystem.current.SetSelectedGameObject (Firstselected5);
+    }
 }
 
 

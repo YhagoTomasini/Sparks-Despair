@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SomdeInicio : MonoBehaviour
 {
@@ -8,11 +9,15 @@ public class SomdeInicio : MonoBehaviour
     public GameObject CamI;
     public AudioSource SomI;
 
+    public GameObject skipButton;
+
     // Start is called before the first frame update
     void Start()
     {
         Iniciar.SetActive(false);
         StartCoroutine(IniciarJogo());
+
+        SkipB();
     }
 
     IEnumerator IniciarJogo()
@@ -34,18 +39,28 @@ public class SomdeInicio : MonoBehaviour
     {
         if (/*Iniciar.activeSelf &&*/ Input.GetKeyDown(KeyCode.Space))
         {
-
-            Iniciar.SetActive(true);
-            CamI.SetActive(false);
-            gameObject.SetActive(false);
-
-
-            if (SomI.isPlaying)
-            {
-                SomI.Stop();
-            }
+            SkipAcao();
+            
         }
         
         
+    }
+    public void SkipAcao()
+    {
+        Iniciar.SetActive(true);
+        CamI.SetActive(false);
+        gameObject.SetActive(false);
+
+
+        if (SomI.isPlaying)
+        {
+            SomI.Stop();
+        }
+    }
+    public void SkipB()
+    {
+
+        EventSystem.current.SetSelectedGameObject(skipButton);
+
     }
 }

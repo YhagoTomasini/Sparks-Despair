@@ -25,6 +25,7 @@ public class ColliderMorte: MonoBehaviour
     public AudioClip SomSopro;
 
     private bool morto;
+    public CanvasSwitcher canvasSwitcher;
 
     private void Start()
     {
@@ -57,6 +58,7 @@ public class ColliderMorte: MonoBehaviour
             Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
             Camera.main.transform.position = novaPosicaoCam;
 
+            //canvasSwitcher
 
             yield return new WaitForSeconds(5);
 

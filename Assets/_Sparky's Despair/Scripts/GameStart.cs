@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
@@ -24,11 +25,10 @@ public class GameStart : MonoBehaviour
         playerGame.GetComponent<PlayerMovement>().PodeMoverPersonagemGeral = true;
         playerGame.GetComponent<PlayerMovement>().PodeMoverPersonagem = true;
 
+    }
 
-
-
-
-
-
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
