@@ -20,7 +20,7 @@ public class SpawnerTroco : MonoBehaviour
 
     IEnumerator SpawnTronco()
     {
-        TempoSpawn = Random.Range(0.5f, 2f);
+        TempoSpawn = Random.Range(0.25f, 1f);
 
         yield return new WaitForSeconds(TempoSpawn);
 
