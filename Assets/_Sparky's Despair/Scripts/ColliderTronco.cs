@@ -16,7 +16,7 @@ public class ColliderTronco : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Dano"))
+        if (other.gameObject.name == "CoAgua")
         {
             other.tag = "Teste";
         }
