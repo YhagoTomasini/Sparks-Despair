@@ -11,6 +11,9 @@ public class SomdeInicio : MonoBehaviour
 
     public GameObject skipButton;
 
+    public CanvasSwitcher canvasSwitcher;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,15 +32,18 @@ public class SomdeInicio : MonoBehaviour
         Iniciar.SetActive(true);
         CamI.SetActive(false);
 
+        canvasSwitcher.SwitchCanvasToStart1();
+
+
         yield return new WaitForSeconds(.5f);
+
 
         gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (/*Iniciar.activeSelf &&*/ Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SkipAcao();
             
@@ -50,6 +56,8 @@ public class SomdeInicio : MonoBehaviour
         Iniciar.SetActive(true);
         CamI.SetActive(false);
         gameObject.SetActive(false);
+
+        canvasSwitcher.SwitchCanvasToStart1();
 
 
         if (SomI.isPlaying)

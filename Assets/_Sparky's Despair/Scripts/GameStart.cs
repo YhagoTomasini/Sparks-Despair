@@ -12,8 +12,12 @@ public class GameStart : MonoBehaviour
     public GameObject CamGame;
     public GameObject RainGame;
 
+    //public CanvasSwitcher canvasSwitcher;
 
-
+    private void Start()
+    {
+        //canvasSwitcher.SwitchCanvasToStart1();
+    }
     public void StartGame()
     {
 

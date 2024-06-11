@@ -134,7 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raioAativar: {fileID: 6810044542269889042}
   raioAlerta: {fileID: 933715665837610453}
-  luzRaio: {fileID: 0}
   IntervaloMin: 0
   IntervaloMax: 0
   Trovao:
@@ -155,7 +154,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

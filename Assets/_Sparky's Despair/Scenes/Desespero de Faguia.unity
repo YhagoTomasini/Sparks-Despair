@@ -11529,6 +11529,7 @@ MonoBehaviour:
   CamI: {fileID: 885493366}
   SomI: {fileID: 932220235}
   skipButton: {fileID: 230772354}
+  canvasSwitcher: {fileID: 644220285}
 --- !u!4 &932220237
 Transform:
   m_ObjectHideFlags: 0

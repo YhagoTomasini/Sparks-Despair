@@ -14,14 +14,22 @@ public class AudioManager : MonoBehaviour
     public AudioSource fogo;
     public AudioSource passos;
     public AudioSource trova;
+    public AudioSource gatos;
+    public AudioSource raio;
 
     public Toggle musics;
     public Toggle effect;
     public Toggle musicsP;
     public Toggle effectP;
 
+    private List<AudioSource> checkedAudioSources = new List<AudioSource>();
+
+
     private void Update()
     {
+        CheckAndMuteNewAudioSources();
+
+
         //Debug.Log(PlayerPrefs.GetInt("SomLigado"));
         //Debug.Log(PlayerPrefs.GetInt("SomChu"));
         //Debug.Log(PlayerPrefs.GetInt("SomFo"));
@@ -46,12 +54,20 @@ public class AudioManager : MonoBehaviour
         MuteAudioSource(fogo, "SomFo", effect);
         MuteAudioSource(passos, "SomPa", effect);
         MuteAudioSource(trova, "SomTro", effect);
+        MuteAudioSource(gatos, "SomGa", effect);
+        MuteAudioSource(raio, "SomRa", effect);
+
+
 
         MuteAudioSource(mainAudioSource, "SomLigado", musicsP);
         MuteAudioSource(chuvas, "SomChu", effectP);
         MuteAudioSource(fogo, "SomFo", effectP);
         MuteAudioSource(passos, "SomPa", effectP);
         MuteAudioSource(trova, "SomTro", effectP);
+        MuteAudioSource(gatos, "SomGa", effectP);
+        MuteAudioSource(raio, "SomRa", effectP);
+
+
     }
     private void MuteAudioSource(AudioSource audioSource, string playerPrefKey, Toggle toggle)
     {
@@ -68,6 +84,33 @@ public class AudioManager : MonoBehaviour
                 {
                     toggle.SetIsOnWithoutNotify(false);
                 }
+            }
+        }
+    }
+
+    private void CheckAndMuteNewAudioSources()
+    {
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            if (!checkedAudioSources.Contains(audioSource))
+            {
+                // Adicione verificações para mutar o novo audio source conforme as preferências
+                if (audioSource == mainAudioSource)
+                    MuteAudioSource(audioSource, "SomLigado", musics);
+                else if (audioSource == chuvas)
+                    MuteAudioSource(audioSource, "SomChu", effect);
+                else if (audioSource == fogo)
+                    MuteAudioSource(audioSource, "SomFo", effect);
+                else if (audioSource == passos)
+                    MuteAudioSource(audioSource, "SomPa", effect);
+                else if (audioSource == trova)
+                    MuteAudioSource(audioSource, "SomTro", effect);
+                else if (audioSource == raio)
+                    MuteAudioSource(audioSource, "SomRa", effect);
+                else if (audioSource == gatos)
+                    MuteAudioSource(audioSource, "SomGa", effect);
             }
         }
     }
@@ -124,6 +167,26 @@ public class AudioManager : MonoBehaviour
         trova.mute = isMuted;
     }
 
+    public void ToggleMuteG()
+    {
+        ToggleMuteAudioSource(gatos, "SomGa");
+    }
+
+    public void SetMuteG(bool isMuted)
+    {
+        gatos.mute = isMuted;
+    }
+
+    public void ToggleMuteR()
+    {
+        ToggleMuteAudioSource(raio, "SomRa");
+    }
+
+    public void SetMuteR(bool isMuted)
+    {
+        raio.mute = isMuted;
+    }
+
     private void ToggleMuteAudioSource(AudioSource audioSource, string playerPrefKey)
     {
         if (audioSource != null)
@@ -134,7 +197,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Método para resetar todas as configurações de som e ligar todos os sons
     public void ResetAllSounds()
     {
         PlayerPrefs.SetInt("SomLigado", 0);
@@ -142,6 +204,8 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetInt("SomFo", 0);
         PlayerPrefs.SetInt("SomPa", 0);
         PlayerPrefs.SetInt("SomTro", 0);
+        PlayerPrefs.SetInt("SomGa", 0);
+        PlayerPrefs.SetInt("SomRa", 0);
 
         if (musics != null)
         {
@@ -166,5 +230,10 @@ public class AudioManager : MonoBehaviour
         fogo.mute = false;
         passos.mute = false;
         trova.mute = false;
+        gatos.mute = false; 
+        raio.mute = false;
+
+
+        checkedAudioSources.Clear();
     }
 }

@@ -3809,6 +3809,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 46606495110115690}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleMuteG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 46606495110115690}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleMuteR
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &7666444296653511538
 GameObject:
@@ -5553,7 +5577,6 @@ GameObject:
   - component: {fileID: 7666444297115556403}
   - component: {fileID: 7666444297115556404}
   - component: {fileID: 7666444297115556405}
-  - component: {fileID: 7666444297115556402}
   m_Layer: 5
   m_Name: jogar
   m_TagString: Untagged
@@ -5678,22 +5701,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7666444297115556402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7666444297115556407}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1e4e75b30e34a1aa60b987e04e81fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasToHide: {fileID: 7666444296117636799}
-  playerGame: {fileID: 0}
-  CamGame: {fileID: 0}
-  RainGame: {fileID: 0}
 --- !u!1 &7666444297187766597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,6 +6477,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 46606495110115690}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleMuteR
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 46606495110115690}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleMuteG
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &7666444297370327553
 GameObject:
@@ -6642,6 +6673,8 @@ MonoBehaviour:
   fogo: {fileID: 0}
   passos: {fileID: 0}
   trova: {fileID: 0}
+  gatos: {fileID: 1299870099, guid: b295e674314634f07bb085389b4c2007, type: 3}
+  raio: {fileID: 1970826979606652388, guid: ae33f0e82a469ef45afa41ff81873ba8, type: 3}
   musics: {fileID: 7666444296803567314}
   effect: {fileID: 7666444297347688867}
   musicsP: {fileID: 7666444297587263657}
