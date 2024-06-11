@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
         QualLeg++;
 
-        Invoke("gambiarra", .4f);
+        Invoke("gambiarra", .5f);
     }
 
     void flip()
@@ -156,7 +156,6 @@ public class PlayerMovement : MonoBehaviour
         {
 
         }
-           //Debug.Log("fds");
 
         else if (dirX != 0 || dirZ != 0)
         {

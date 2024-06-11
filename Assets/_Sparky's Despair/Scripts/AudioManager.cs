@@ -58,7 +58,6 @@ public class AudioManager : MonoBehaviour
         MuteAudioSource(raio, "SomRa", effect);
 
 
-
         MuteAudioSource(mainAudioSource, "SomLigado", musicsP);
         MuteAudioSource(chuvas, "SomChu", effectP);
         MuteAudioSource(fogo, "SomFo", effectP);

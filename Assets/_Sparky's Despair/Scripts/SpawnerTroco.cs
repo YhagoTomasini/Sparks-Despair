@@ -12,15 +12,15 @@ public class SpawnerTroco : MonoBehaviour
 
     void Start()
     {
-        TempoSpawn = 2f;
-        TempoEntre = 2f;
+        TempoSpawn = 1f;
+        TempoEntre = 1f;
 
         StartCoroutine(SpawnTronco());
     }
 
     IEnumerator SpawnTronco()
     {
-        TempoSpawn = Random.Range(0.5f, 3f);
+        TempoSpawn = Random.Range(0.5f, 2f);
 
         yield return new WaitForSeconds(TempoSpawn);
 

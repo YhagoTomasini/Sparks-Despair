@@ -26,27 +26,27 @@ public class CamMoviment : MonoBehaviour
             
             if (ScoreValue.scoreValue >= 20)
             {
-                CameraVelocity = 1.4f;
+                CameraVelocity = 1.2f;
             }
             
             if (ScoreValue.scoreValue >= 40)
             {
-                CameraVelocity = 1.8f;
+                CameraVelocity = 1.4f;
             }
             
             if (ScoreValue.scoreValue >= 60)
             {
-                CameraVelocity = 2.2f;
+                CameraVelocity = 1.6f;
             }
             
             if (ScoreValue.scoreValue >= 80)
             {
-                CameraVelocity = 2.6f;
+                CameraVelocity = 1.8f;
             }
             
             if (ScoreValue.scoreValue >= 100)
             {
-                CameraVelocity = 3f;
+                CameraVelocity = 2f;
             }
         }
     }
