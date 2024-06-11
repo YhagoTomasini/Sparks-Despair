@@ -16,7 +16,6 @@ public class ColliderMorte: MonoBehaviour
     public GameObject Player;
     public GameObject Splash;
 
-    //private float QuedaVelo;
 
     public MonoBehaviour AnimVida;
     private Vector3 posicaoCamera;
@@ -31,7 +30,7 @@ public class ColliderMorte: MonoBehaviour
     {
         morto = false;
         posicaoCamera = Camera.main.transform.position;
-        //QuedaVelo = 2f;
+
     }
 
     IEnumerator MorteInimigo()
@@ -58,7 +57,7 @@ public class ColliderMorte: MonoBehaviour
             Vector3 novaPosicaoCam = new Vector3(posicaoCamera.x, posicaoCamera.y, gameObject.transform.position.z - 12);
             Camera.main.transform.position = novaPosicaoCam;
 
-            //canvasSwitcher
+            canvasSwitcher.SwitchCanvasDeath();
 
             yield return new WaitForSeconds(5);
 

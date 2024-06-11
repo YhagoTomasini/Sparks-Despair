@@ -260,9 +260,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SomdeInicio, Assembly-CSharp
-        m_MethodName: SkipAcao
+      - m_Target: {fileID: 7666444297746894094}
+        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5983,8 +5983,8 @@ RectTransform:
   m_GameObject: {fileID: 7666444297285470813}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7666444296945641881}
   m_Father: {fileID: 7666444296117636798}
@@ -5993,7 +5993,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5, y: 329}
-  m_SizeDelta: {x: 256, y: 256}
+  m_SizeDelta: {x: 1080, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7666444297285470809
 CanvasRenderer:
@@ -6023,7 +6023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af10f936d7a024ed5847c40ed2b26b09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59a9917cf90372f439b75ec85739c016, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7692,10 +7692,12 @@ MonoBehaviour:
   CanvasSom: {fileID: 7666444296309466874}
   CanvasPause: {fileID: 7666444297187766597}
   CanvasCredit: {fileID: 7694666723917713151}
+  CanvasDeath: {fileID: 7691915326533593070}
   FirstSelected1: {fileID: 7666444296300197538}
   FirstSelected2: {fileID: 7666444297115556407}
   Firstselected3: {fileID: 7666444297948321920}
   Firstselected4: {fileID: 5428690971391733286}
+  Firstselected5: {fileID: 777121169330537034}
   audioM: {fileID: 46606495110115690}
 --- !u!114 &7666444297746894094
 MonoBehaviour:
