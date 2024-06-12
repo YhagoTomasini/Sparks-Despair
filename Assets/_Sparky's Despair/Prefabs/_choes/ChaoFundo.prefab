@@ -1864,6 +1864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Botoes
       objectReference: {fileID: 0}
+    - target: {fileID: 6477063101123171991, guid: 6c4ff3c9dce7145a89f7d8f6db1c71b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8278521064162164362, guid: 6c4ff3c9dce7145a89f7d8f6db1c71b6,
         type: 3}
       propertyPath: m_RootOrder
